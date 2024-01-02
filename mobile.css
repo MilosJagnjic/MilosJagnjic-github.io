@@ -354,6 +354,11 @@
         color: white;
     }
 
+       .secondary_nav_tab:link{
+        text-decoration: none;
+        color: white;
+    }
+
 
 
     .duq_major {
