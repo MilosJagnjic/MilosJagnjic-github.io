@@ -1,6 +1,6 @@
 @media screen and (max-width:1024px) {
 
-    body{
+    html, body{
         min-height: 100%;
         width: auto;
     }
@@ -18,6 +18,8 @@
     .title_name_nav{
         display: block;
         font-size: 2rem;
+
+        
 
 
       
@@ -70,6 +72,7 @@
 
         width: 100%;
 
+       
     
 
         /* border: 1px white solid; */
@@ -300,9 +303,6 @@
 
 
 
-    .bottom_space{
-        width: 100%;
-    }
 
     .mobile_tab_experience{
         display: flex;
@@ -389,17 +389,23 @@
 
     ._testing_grid {
         display: grid;
+
+        
+
+        
       
-        grid-template-columns: repeat(7,111.86px);
-        grid-template-rows: repeat(3,200px);
-      
-        /* border: 2px grey dotted; */
+        grid-template-columns: repeat(12,8.33%);
+        grid-template-rows: repeat(5,75px);
+       
+        /* display: none;  */
     }
 
 
     .back_port{
-        grid-column: 2/3;
-        grid-row: 1/4;
+        transform-origin: center;
+
+        grid-column: 3/11;
+        grid-row: 1/5;
 
         height: 90%;
 
@@ -407,23 +413,47 @@
 
         border: 8px black solid;
 
-        margin-top: 3rem;
+       
+
+
+
+        
 
 
     }
 
     .temp_image{
-        grid-column: 2/3;
-        grid-row: 1/4;
+        transform-origin:  left;
+        grid-column: 3/12;
+        grid-row: 1/6;
 
-
-        border-radius: 80%;
-        margin-top: 1rem;
+        
+   
+        
+        
+        
 
     }
 
+    .main_text_promise{
+        overflow: hidden;
+
+       
+    }
+
     .main_text_hope{
+        overflow: hidden;
         padding-top: 2rem;
+
+        
+    }
+
+
+    img{
+        height: 100%;
+        width: 100%;
+
+        
     }
 
 
