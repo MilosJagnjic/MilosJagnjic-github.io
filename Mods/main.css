@@ -1,0 +1,465 @@
+/* @import url("/Mods/experience_page.css");
+@import url("/Mods/main_page.css");
+@import url("/Mods/mobile.css"); */
+
+:root {
+  --nav-heading-text-h2: 150%;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Inknut Antiqua", serif;
+  color: whitesmoke;
+}
+
+/* h1{font-size: 2.5rem;} */
+
+/* Your going to need to create a div between the Left ____ Middle ____ Right Links/Texts 
+in order to getthe effect that your wnat, otherwise its just going to overflow the box 
+because text is handled differently to boxes and divs 
+
+
+o7 */
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--nav-heading-text-h2);
+  font-weight: 500;
+  display: inline;
+}
+
+body {
+  background: radial-gradient(at top left, #34344d, rgba(0, 0, 0, 0.9));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100%;
+  width: auto;
+}
+
+.nav_list_div {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nav_dir {
+  display: flex;
+  list-style: none;
+
+  text-wrap: pretty;
+}
+
+.title_name {
+  font-size: 4rem;
+
+  text-wrap: nowrap;
+}
+
+.nav_list_div a:link {
+  text-decoration: none;
+  color: whitesmoke;
+
+  padding: 0.5rem 1rem 0.25rem 1rem;
+
+  text-align: center;
+  line-height: 18.5rem;
+  vertical-align: middle;
+
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.nav_list_div a:link:hover {
+  animation: borderel 0.25s forwards 0s 1;
+}
+
+@keyframes borderel {
+  0% {
+    border-bottom: none;
+  }
+
+  100% {
+    border-bottom: 3px #7d7db8 solid;
+  }
+}
+
+.nav_list_div a:visited {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.main_grid {
+  display: flex;
+  
+  /* border: 1px solid black; */
+
+  justify-content: center;
+}
+
+._testing_grid {
+  display: grid;
+
+  grid-template-columns: repeat(5,183px);
+  grid-template-rows: repeat(3,233px);
+
+  /* border: 2px grey dotted; */
+}
+
+
+
+
+/* Experience Screen */
+
+.secondary_nav {
+  position: fixed;
+  top: 18rem;
+  right: 1rem;
+
+  width: 19%;
+
+  height: calc(100% - 20rem);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  /* border-radius: 40px; */
+
+  /* border: 2px dotted green; */
+}
+
+.secondary_nav::after {
+  content: "";
+  position: absolute;
+
+  width: 4px;
+  height: 50rem;
+
+  left: 0;
+  top: 5rem;
+
+  border-left: 1px #9c9c9b solid;
+}
+
+.secondary_nav a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.secondary_nav a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.grid_container {
+  /* border: 1px dotted blueviolet; */
+
+  /* margin-right: 16rem; */
+
+  /* max-width: 80%;
+  height: auto; */
+
+  margin-left: 5%;
+  margin-right: 20%;
+}
+
+.folder_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: [first-row] 10rem [second-row] 50rem;
+
+  /* border: 1px solid white; */
+  /* margin: .5rem 3rem .5rem 5%; */
+}
+
+.folder_heading {
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(1, auto);
+}
+
+.folder_title {
+  border: 1px solid white;
+
+  font-size: 1rem;
+
+  margin: 1.5rem 1.5rem 1.5rem 0.5rem;
+  background-color: #9242d0;
+  border-radius: 40px;
+
+  grid-row: 1/1;
+  grid-column: 1/2;
+
+  text-align: center;
+
+  vertical-align: middle;
+  line-height: 7rem;
+
+  overflow: hidden;
+
+  text-shadow: -5px 5px 5px black;
+}
+
+/* #FEE5C7 */
+
+.folder_above_flap {
+  background-color: #fee5c7;
+  border-radius: 40px 40px 0 0;
+
+  grid-column: 2/4;
+  grid-row: 1/1;
+}
+
+.timeline_focus {
+  background-color: #9242d0;
+  border: 1px solid black;
+
+  margin: 2rem;
+
+  grid-row: 1/1;
+  grid-column: 2/4;
+
+  border-radius: 40px;
+
+  text-align: center;
+
+  vertical-align: middle;
+  line-height: 6rem;
+
+  overflow: hidden;
+
+  text-shadow: 5px 5px 7px black;
+  font-size: 100;
+}
+
+.folder_body_info {
+  background-color: #fee5c7;
+  border-radius: 40px 0 40px 40px;
+
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, 16.67rem);
+}
+
+.summary_focus {
+  background-color: #9242d0;
+  border: 1px solid black;
+
+  grid-column: 1/3;
+  grid-row: 1/4;
+
+  margin: 2rem 1rem 2rem 2rem;
+
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: start;
+}
+
+.skill_focus_list_container {
+  background-color: #9242d0;
+  border: 1px solid black;
+
+  grid-column: 3/4;
+  grid-row: 1/4;
+
+  margin: 2rem 2rem 2rem 1rem;
+
+  border-radius: 40px;
+}
+
+.container_follow {
+  margin-top: 7rem;
+}
+
+.qa_color {
+  background-color: grey;
+}
+
+.an_color {
+  background-color: #115a56;
+}
+
+.duq_color {
+  background-color: #b12c2c;
+}
+
+.secondary_nav_tab {
+  border-radius: 40px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 5rem;
+
+  animation: secondary_nav_tab_ana_rest 0.25s forwards 0s 1;
+}
+
+.secondary_nav_tab:hover {
+  animation: secondary_nav_tab_ana 0.25s forwards 0s 1;
+}
+
+/* .secondary_nav_tab:active{
+  height: 7rem;
+  width: 90%;
+  line-height: 7rem;
+} */
+
+@keyframes secondary_nav_tab_ana {
+  0% {
+    height: 5rem;
+    width: 75%;
+    line-height: 5rem;
+
+    border: 1px white solid;
+  }
+
+  100% {
+    height: 7rem;
+    width: 90%;
+    line-height: 7rem;
+
+    border: 1.5px white solid;
+  }
+}
+
+@keyframes secondary_nav_tab_ana_rest {
+  0% {
+    height: 7rem;
+    width: 90%;
+    line-height: 7rem;
+  }
+
+  100% {
+    height: 5rem;
+    width: 75%;
+    line-height: 5rem;
+  }
+}
+
+.webdev_sec {
+  transform-origin: center;
+
+  height: 5rem;
+  width: 75%;
+
+  background-color: #9242d0;
+
+  margin-top: 8rem;
+}
+.qa_sec {
+  transform-origin: center;
+
+  height: 5rem;
+  width: 75%;
+
+  margin-top: 8rem;
+}
+.an_sec {
+  transform-origin: center;
+
+  height: 5rem;
+  width: 75%;
+
+  margin-top: 8rem;
+}
+.duq_sec {
+  transform-origin: center;
+
+  height: 5rem;
+  width: 75%;
+
+  margin-top: 8rem;
+}
+
+.duq_major {
+  font-size: 0.8rem;
+}
+
+.tab_buffer {
+  height: 6rem;
+}
+
+.timeline_information {
+  text-align: end;
+  text-wrap: nowrap;
+  height: 3rem;
+
+  font-weight: bolder;
+  font-size: small;
+
+  text-shadow: 5px 5px 10px black;
+
+  padding-right: 2rem;
+}
+
+.title_skill_focus {
+  font-size: smaller;
+
+  list-style: none;
+  border-style: inset;
+  border-radius: 40px;
+  text-wrap: nowrap;
+
+  text-align: center;
+  margin: 1rem 0.25rem 0rem 0.25rem;
+}
+
+.skill_listing {
+  list-style: none;
+  text-align: center;
+
+  padding: 0rem;
+}
+
+.bottom_space {
+  width: auto;
+  height: 10rem;
+}
+
+
+.back_port{
+  grid-column: 2/3;
+  grid-row: 1/4;
+
+  height: 545px;
+
+  border-radius: 8rem 8rem 15rem 15rem;
+
+  border: 8px black solid;
+
+  margin-top: 3rem;
+
+
+
+}
+
+.temp_image{
+  grid-column: 2/3;
+  grid-row: 1/4;
+
+
+  border-radius: 80%;
+  margin-top: 1rem;
+
+}
+
+.text_content{
+
+  text-align: center;
+}
